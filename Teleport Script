@@ -19,12 +19,14 @@ local Window = Rayfield:CreateWindow({
        Subtitle = "Key System",
        Note = "How To Get Key : | Discord Tutorial Hub : tvdFyKw3",
        FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
        Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
     }
  })
 
+
+ --Main
  local InfoTab = Window:CreateTab("Home", 4483362458) -- Title, Image
  local Section = InfoTab:CreateSection("Infomation")
  local Input = InfoTab:CreateInput({
@@ -119,82 +121,354 @@ local Window = Rayfield:CreateWindow({
     -- The variable (Text) is a string for the value in the text box
     end,
  })
+ --How to use
+ local Main2Tab = Window:CreateTab("How To Use", 4483362458) -- Title, Image
+ local Section = Main2Tab:CreateSection("How To Use : ")
+ local Input = Main2Tab:CreateInput({
+    Name = "Step 1 : ",
+    PlaceholderText = "Choose The Sea You Want To Go To",
+    RemoveTextAfterFocusLost = false,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
+    end,
+ })
+ local Input = Main2Tab:CreateInput({
+    Name = "Step 2 : ",
+    PlaceholderText = "Click The Roblox Icon Or Press esc",
+    RemoveTextAfterFocusLost = false,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
+    end,
+ })
+ local Input = Main2Tab:CreateInput({
+    Name = "Step 3 : ",
+    PlaceholderText = "Click Reset Character Or Click R",
+    RemoveTextAfterFocusLost = false,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
+    end,
+ })
 
- local MainTab = Window:CreateTab("Teleport Map", 4483362458) -- Title, Image
- local Section = MainTab:CreateSection("Sea")
- local Dropdown = MainTab:CreateDropdown({
-    Name = "Choses Sea",
-    Options = {"Sea 1","Sea 2","Sea 3"},
-    CurrentOption = {"Sea 1"},
-    MultipleOptions = false,
-    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Option)
-    -- The function that takes place when the selected option is changed
-    -- The variable (Option) is a table of strings for the current selected options
+ local Input = Main2Tab:CreateInput({
+    Name = "Step 4 : ",
+    PlaceholderText = "Enter",
+    RemoveTextAfterFocusLost = false,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
     end,
  })
- local Button = MainTab:CreateButton({
-    Name = "Teleport",
-    Callback = function()
-    -- The function that takes place when the button is pressed
+ local Input = Main2Tab:CreateInput({
+    Name = "Step 5 : ",
+    PlaceholderText = "Click On The Island You Want To Visit 1 Click",
+    RemoveTextAfterFocusLost = false,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
     end,
  })
+ --Sea 1
+ local MainTab = Window:CreateTab("Sea 1", 4483362458) -- Title, Image
  local Section = MainTab:CreateSection("Sea 1")
- local Dropdown = MainTab:CreateDropdown({
-    Name = "Choses Map",
-    Options = {"Starter Pirate Island","Starter Marine Island","Jungle","Pirate Village","Desert","Middle Island","Frozen Village","Marine Fortress","Skylands","Prison","Colosseum","Magma Village","Underwater City","Fountain City"},
-    CurrentOption = {"Starter Pirate Island"},
-    MultipleOptions = false,
-    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Option)
-    -- The function that takes place when the selected option is changed
-    -- The variable (Option) is a table of strings for the current selected options
-    end,
- })
  local Button = MainTab:CreateButton({
-    Name = "Teleport",
+    Name = "Starter Pirate Island",
     Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7753.17676, 5562.67822, -446.663971, -0.220987827, -0, -0.97527653, -0, 1, -0, 0.975276649, 0, -0.220987797)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1187.25244, 16.5293198, 1380.6377, -0.75470823, 0, 0.656060576, 0, 1, 0, -0.656060576, 0, -0.75470823)
     -- The function that takes place when the button is pressed
     end,
  })
- local Section = MainTab:CreateSection("Sea 2")
- local Dropdown = MainTab:CreateDropdown({
-    Name = "Choses Map",
-    Options = {"Kingdom of Rose","Usoap’s Island","Cafe","Don Swan's Mansion","Green Zone","Graveyard Island","Snow Mountain","Hot and Cold","Cursed Ship","Ice Castle","Forgotten Island","Dark Arena"},
-    CurrentOption = {"Kingdom of Rose"},
-    MultipleOptions = false,
-    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Option)
-    -- The function that takes place when the selected option is changed
-    -- The variable (Option) is a table of strings for the current selected options
-    end,
- })
  local Button = MainTab:CreateButton({
-    Name = "Teleport",
+    Name = "Starter Marine Island",
     Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2540.00708, 6.8556695, 2039.81958, 0.1391619, 0, -0.990269661, 0, 1, 0, 0.990269661, 0, 0.1391619)
     -- The function that takes place when the button is pressed
     end,
  })
- local Section = MainTab:CreateSection("Sea 3")
- local Dropdown = MainTab:CreateDropdown({
-    Name = "Choses Map",
-    Options = {"Port Town","Hydra Island","Floating Turtle","Castle on the Sea","Haunted Castle","Sea of Treats"},
-    CurrentOption = {"Port Town"},
-    MultipleOptions = false,
-    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Option)
-    -- The function that takes place when the selected option is changed
-    -- The variable (Option) is a table of strings for the current selected options
-    end,
- })
  local Button = MainTab:CreateButton({
-    Name = "Teleport",
+    Name = "Jungle",
     Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1318.77527, 11.8512754, -104.388702, 0.139203906, 0, -0.99026376, 0, 1, 0, 0.99026376, 0, 0.139203906)
     -- The function that takes place when the button is pressed
     end,
  })
+ local Button = MainTab:CreateButton({
+    Name = "Pirate Village",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-814.60614, 25.0889587, 4105.21826, 0.896878362, 3.02367873e-08, 0.442277282, -2.45314009e-08, 1, -1.86197795e-08, -0.442277282, 5.84999649e-09, 0.896878362)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Desert",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1348.02905, 58.8438873, 4503.17188, -0.624364138, 0, -0.781133413, 0, 1, 0, 0.781133413, 0, -0.624364138)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Middle Island",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-698.178345, 11.7956657, 1579.17444, -0.624364138, 0, -0.781133413, 0, 1, 0, 0.781133413, 0, -0.624364138)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Frozen Village",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1394.46399, 40.5448875, -1321.63904, -0.407373548, 0, -0.913261652, 0, 1, 0, 0.913261652, 0, -0.407373548)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Marine Fortress",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5167.59668, 279.652252, 4393.13281, -0.624364138, 0, -0.781133413, 0, 1, 0, 0.781133413, 0, -0.624364138)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Skylands",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4808.76904, 722.826355, -2668.81787, -0.575510144, 0, -0.8177948, 0, 1, 0, 0.8177948, 0, -0.575510144)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Prison",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5282.15479, 161.81369, 852.884644, -0.575510085, 9.25773946e-09, -0.817794681, 4.6592131e-08, 1, -2.14681037e-08, 0.817794681, -5.04579063e-08, -0.575510085)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Colosseum",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2132.24146, 150.373215, -3017.68311, -0.575510085, 4.20232649e-09, -0.817794681, 2.11525428e-08, 1, -9.74715952e-09, 0.817794681, -2.29080257e-08, -0.575510085)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Magma Village",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5513.97852, 65.9943161, 8577.40039, -0.575510144, 0, -0.8177948, 0, 1, 0, 0.8177948, 0, -0.575510144)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Underwater City",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(61144.168, 18.8707829, 1379.80554, -0.963639081, 0, 0.267207325, 0, 1, 0, -0.267207325, 0, -0.963639081)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = MainTab:CreateButton({
+    Name = "Fountain City",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5416.34131, 429.357483, 4410.79102, -0.963639081, 0, 0.267207325, 0, 1, 0, -0.267207325, 0, -0.963639081)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ --Sea 2
+ local Main2Tab = Window:CreateTab("Sea 2", 4483362458) -- Title, Image
+ local Section = Main2Tab:CreateSection("Sea 2")
+ local Button = Main2Tab:CreateButton({
+    Name = "Kingdom of Rose",
+    Callback = function()
+        local teleport_table = {
+    location1 = Vector3.new(-388.842, 73.0199, 1919.44), -- your desired position
+}
 
+local tween_s = game:GetService('TweenService')
+local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+
+local lp = game.Players.LocalPlayer
+
+function bypass_teleport(v)
+    if lp.Character and 
+    lp.Character:FindFirstChild('HumanoidRootPart') then
+        local cf = CFrame.new(v)
+        local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+        a:Play()
+        -- a.Completed:Wait()
+        -- print('Teleporting Done!')
+    end
+end
+
+bypass_teleport(teleport_table.location1)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Usoap’s Island",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4768.09668, 8.45998573, 2903.5127, 0.962819755, -1.30784104e-08, -0.270144671, -7.14639667e-11, 1, -4.86673208e-08, 0.270144671, 4.68771617e-08, 0.962819755)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Green Zone",
+    Callback = function()
+        local teleport_table = {
+            location1 = Vector3.new(-2135.61, 72.9661, -2758.82), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('Teleporting Done!')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Graveyard",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4743.40137, 8.26866627, 2849.53711, 0.0852679908, 1.10637878e-07, -0.996358037, -4.74838373e-08, 1, 1.06978639e-07, 0.996358037, 3.81890501e-08, 0.0852679908)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Snow Mountain",
+    Callback = function()
+        local teleport_table = {
+            location1 = Vector3.new(1210, 429.422, -4663), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('Teleporting Done!')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Hot and Cold",
+    Callback = function()
+        local teleport_table = {
+            location1 = Vector3.new(-5424.02, 15.9518, -4825.43), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('Teleporting Done!')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Cursed Ship",
+    Callback = function()
+        local teleport_table = {
+            location1 = Vector3.new(-6494.07, 83.187, -266.788), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('Teleporting Done!')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Ice Castle",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5544.71777, 61.6393852, -6359.08887, -0.713899732, 0, -0.70024842, 0, 1, 0, 0.70024842, 0, -0.713899732)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Forgotten Island",
+    Callback = function()
+        local teleport_table = {
+            location1 = Vector3.new(-3003, 238.846, -10188.3), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('Teleporting Done!')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ local Button = Main2Tab:CreateButton({
+    Name = "Dark Arena",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3948, 14.5, -3479, 0.99926883, -0, -0.0382336602, 0, 1, -0, 0.0382336602, 0, 0.99926883)
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ --Sea 3
+ local Main3Tab = Window:CreateTab("Sea 3", 4483362458) -- Title, Image
+ local Section = Main3Tab:CreateSection("Sea 3")
+
+--LocalPlayers
  local OtherTab = Window:CreateTab("Local Player", 4483362458) -- Title, Image
  local Section = OtherTab:CreateSection("Movement")
  local Slider = OtherTab:CreateSlider({
@@ -252,6 +526,12 @@ module:Teleport(game.PlaceId)
     CurrentValue = false,
     Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
+        local args = {
+            [1] = "Cousin",
+            [2] = "Buy"
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))              
     -- The function that takes place when the toggle is pressed
     -- The variable (Value) is a boolean on whether the toggle is true or false
     end,
