@@ -1,0 +1,121 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = true, IntroText = "Key System"})
+OrionLib:MakeNotification({
+	Name = "If You Dont't Key",
+	Content = "Buy Key Now | " ..Player.Name.." ",
+	Image = "",
+	Time = 6
+})
+
+_G.Key = "PinguGay"
+_G.KeyInput = "String"
+_G.Key1 = "Pingu"
+_G.KeyInput1 = "String"
+
+function MakeScriptHub()
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+    local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+end
+
+function CorrectKey()
+    OrionLib:MakeNotification({
+        Name = "Correct Key",
+        Content = "Thank You",
+        Image = "",
+        Time = 5
+    })
+end
+
+function InCorrectKey()
+    OrionLib:MakeNotification({
+        Name = "InCorrect Key",
+        Content = "Buy Key Now!",
+        Image = "",
+        Time = 5
+    })
+end
+
+local Tab = Window:MakeTab({
+	Name = "Prenium Key",
+	Icon = "",
+	PremiumOnly = false
+})
+Tab:AddTextbox({
+	Name = "Paste Your Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+Tab:AddButton({
+	Name = "Check Key",
+	Callback = function()
+        if _G.KeyInput == _G.Key then
+        MakeScriptHub()
+        CorrectKey()
+        else
+            InCorrectKey()
+        end
+  	end    
+})
+local HowTab = Window:MakeTab({
+	Name = "Free Key",
+	Icon = "",
+	PremiumOnly = false
+})
+HowTab:AddTextbox({
+	Name = "Paste Your Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput1 = Value
+	end	  
+})
+HowTab:AddButton({
+	Name = "Check Key",
+	Callback = function()
+        if _G.KeyInput1 == _G.Key1 then
+        MakeScriptHub()
+        CorrectKey()
+        else
+            InCorrectKey()
+        end
+  	end    
+})
+local How2Tab = Window:MakeTab({
+	Name = "How to Buy",
+	Icon = "",
+	PremiumOnly = false
+})
+local Section = How2Tab:AddSection({
+	Name = "Copy Link Sever Discord"
+})
+local Section = How2Tab:AddSection({
+	Name = "Don't Delete Link"
+})
+How2Tab:AddTextbox({
+	Name = "Copy Link",
+	Default = "https://discord.gg/Us7TdCJb",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+How2Tab:AddTextbox({
+	Name = "Copy Link",
+	Default = "https://discord.gg/Us7TdCJb",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+How2Tab:AddTextbox({
+	Name = "Copy Link",
+	Default = "https://discord.gg/Us7TdCJb",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
